@@ -615,6 +615,21 @@ project doc `claude/taste-interview-log.md`), beats approved before copy:
   Every fact is in the verified list above; "award-winning" is deliberately
   absent.
 
+**Restyled the same day to Graham's visual layout, at Nathan's request.**
+The four sections from `#problem` to `#bio` (including the existing `#story`)
+are now full-width colour bands (`.band--dark` navy, `--light`, `--tint`,
+`--slate`), two columns of text beside a photo (`.split`), with two-tone
+headlines (`.hl`). `#ladder` has a three-photo collage (`.collage`): console,
+Vision Pro, video shoot, which is the skill-stacking the section argues for.
+`teaching.jpg`, previously unused, is now the `#problem` photo. Photos sit
+vertically centred beside the text and move above it below 760px.
+**The #problem and #ladder copy was then cut roughly in half** (to ~110 and
+~150 words) so the text column is about as tall as the photo, which is what
+makes Graham's layout work. Dropped on purpose: the "two camps" paragraph and
+the "if you'd rather shoot on film, I support you" concession. Both are
+Nathan's real views (taste interview Q1 and Q3) and are good newsletter
+material.
+
 Graham's offer grid, challenge and podcast sections were skipped on purpose:
 nothing is for sale yet, and there is no YouTube episode 1. Named endorsements
 wait on consented quotes. CSS is appended at the end of `site.css`, scoped to

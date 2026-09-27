@@ -677,18 +677,61 @@ figure.plate img{display:block;width:100%;height:auto;border-radius:6px;backgrou
 
 
 /* ------------------------------------------------------------------
-   Homepage additions, 27 Sep 2026: #problem, #ladder, #bio.
-   #problem and #ladder reuse .story for the 700px measure and the
-   larger first paragraph. Everything new is scoped to .ladder / .bio.
+   Homepage bands, 27 Sep 2026. Modelled on grahamcochrane.com: each
+   section is a full-width colour band, text beside a photo, big
+   two-tone headline. Used by #problem, #story, #ladder, #bio only.
+   Everything is scoped to .band / .split / .collage / .ladder-steps /
+   .bio-*, so interior pages are untouched.
    ------------------------------------------------------------------ */
-.ladder-steps{max-width:700px;margin:6px 0 26px;padding:0;list-style:none;counter-reset:step;}
+section.band{padding:88px 0;}
+section.band, section.band + section{border-top:none;}
+.band--light{background:var(--paper);}
+.band--tint{background:var(--paper-2);}
+.band--dark{background:var(--deep);color:#e8edf2;}
+.band--slate{background:#34495d;color:#e8edf2;}
+.band h2{font-size:clamp(30px,4vw,44px);line-height:1.14;margin-bottom:24px;max-width:none;}
+.band h2 .hl{color:#2b75ad;}
+.band--dark h2,.band--slate h2{color:#fff;}
+.band--dark h2 .hl,.band--slate h2 .hl{color:var(--sky);}
+.band--dark p,.band--slate p{color:#c9d3dc;}
+.band--dark a,.band--slate a{color:#fff;}
+.band .split-text > p:first-of-type{font-size:20px;}
+.band .split-text p{max-width:none;}
+
+.split{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,0.9fr);gap:60px;align-items:center;}
+.split--media-first{grid-template-columns:minmax(0,0.9fr) minmax(0,1.1fr);}
+.split-media{margin:0;}
+.split-media > img{display:block;width:100%;height:auto;border-radius:8px;box-shadow:0 18px 44px rgba(10,20,30,.22);}
+.split-media figcaption{font-size:14px;line-height:1.5;margin-top:12px;color:var(--ink-soft);}
+.band--dark figcaption,.band--slate figcaption{color:#9fb0bf;}
+
+/* Three overlapping photos, like the "A Message From Graham" block.
+   Container is 1 : 1.08. Each image is positioned in % so the whole
+   thing scales as one piece on a phone. */
+.collage{position:relative;aspect-ratio:1/1.08;}
+.collage img{position:absolute;display:block;height:auto;object-fit:cover;border:6px solid #fff;border-radius:6px;box-shadow:0 14px 34px rgba(10,20,30,.22);}
+.collage .c1{left:0;top:0;width:54%;aspect-ratio:1/1;}
+.collage .c2{right:0;top:7%;width:38%;aspect-ratio:9/16;z-index:2;}
+.collage .c3{left:6%;bottom:0;width:68%;aspect-ratio:3/2;z-index:3;}
+.collage-cap{font-size:14px;font-style:italic;color:var(--ink-soft);margin:16px 0 0;}
+
+.ladder-steps{margin:6px 0 28px;padding:0;list-style:none;counter-reset:step;}
 .ladder-steps li{counter-increment:step;position:relative;padding:14px 0 14px 52px;border-top:1px solid var(--line);font-size:18px;}
 .ladder-steps li:last-child{border-bottom:1px solid var(--line);}
 .ladder-steps li::before{content:counter(step);position:absolute;left:0;top:12px;width:34px;height:34px;border-radius:50%;background:var(--deep);color:#fff;font-family:var(--font-display);font-weight:600;font-size:16px;display:flex;align-items:center;justify-content:center;}
-.bio h2{max-width:700px;}
-.bio-lede{color:var(--ink-soft);margin-bottom:24px;}
-.bio-card{max-width:760px;background:var(--paper-2);border:1px solid var(--line);border-radius:6px;padding:22px 26px;margin-bottom:18px;}
-.bio-card p{margin:8px 0 0;font-size:17px;}
+
+.bio-lede{margin-bottom:24px;}
+.bio-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:8px;padding:22px 26px;margin-bottom:18px;}
+.bio-card .eyebrow{color:var(--sky);}
+.band--slate .bio-card p{color:#eef2f5;margin:8px 0 0;font-size:17px;}
+
+@media(max-width:760px){
+  section.band{padding:60px 0;}
+  .split,.split--media-first{grid-template-columns:1fr;gap:30px;}
+  .split-media{order:-1;}
+  .collage{max-width:440px;}
+  .band .split-text > p:first-of-type{font-size:18.5px;}
+}
 @media(max-width:560px){
   .bio-card{padding-left:18px;padding-right:18px;}
   .ladder-steps li{font-size:17px;padding-left:46px;}
