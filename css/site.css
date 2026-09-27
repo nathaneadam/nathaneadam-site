@@ -674,3 +674,22 @@ figure.plate img{display:block;width:100%;height:auto;border-radius:6px;backgrou
 .voices-run blockquote p{font-family:var(--font-display);font-size:16.5px;line-height:1.5;margin:0 0 10px;color:var(--ink);max-width:none;}
 .voices-run blockquote cite{font-style:normal;font-size:14px;color:var(--ink-soft);}
 @media(max-width:700px){.voices-run{grid-template-columns:1fr;gap:22px;}}
+
+
+/* ------------------------------------------------------------------
+   Homepage additions, 27 Sep 2026: #problem, #ladder, #bio.
+   #problem and #ladder reuse .story for the 700px measure and the
+   larger first paragraph. Everything new is scoped to .ladder / .bio.
+   ------------------------------------------------------------------ */
+.ladder-steps{max-width:700px;margin:6px 0 26px;padding:0;list-style:none;counter-reset:step;}
+.ladder-steps li{counter-increment:step;position:relative;padding:14px 0 14px 52px;border-top:1px solid var(--line);font-size:18px;}
+.ladder-steps li:last-child{border-bottom:1px solid var(--line);}
+.ladder-steps li::before{content:counter(step);position:absolute;left:0;top:12px;width:34px;height:34px;border-radius:50%;background:var(--deep);color:#fff;font-family:var(--font-display);font-weight:600;font-size:16px;display:flex;align-items:center;justify-content:center;}
+.bio h2{max-width:700px;}
+.bio-lede{color:var(--ink-soft);margin-bottom:24px;}
+.bio-card{max-width:760px;background:var(--paper-2);border:1px solid var(--line);border-radius:6px;padding:22px 26px;margin-bottom:18px;}
+.bio-card p{margin:8px 0 0;font-size:17px;}
+@media(max-width:560px){
+  .bio-card{padding-left:18px;padding-right:18px;}
+  .ladder-steps li{font-size:17px;padding-left:46px;}
+}

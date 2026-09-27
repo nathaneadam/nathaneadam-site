@@ -387,7 +387,10 @@ Hold the line.
 - **His titles have changed, and old ones are not errors.** Assistant Professor
   of Audio Engineering Technology (2017, per Belmont News) → Professor of
   Emerging Media (2023, per WPLN) → Associate Professor of Media Production
-  (current, used on the site). All three were accurate when published. This is
+  (2023–Sep 2026) → **Associate Professor of Film, Television, and Media
+  Production** (current; confirmed by Nathan 27 Sep 2026 and changed on all
+  23 pages, the JSON-LD, and both og cards that carry a title). All were
+  accurate when published. This is
   separate from the genuinely wrong titles in circulation — see the editorial
   rules above; the problem ones are *"assistant professor of cinema, television
   and emerging media"* (Jamie Dunham) and the Belmont faculty page's claims.
@@ -592,6 +595,31 @@ Pillow at quality 80. Phone page weight is roughly half desktop. Skip the varian
 when the full file is already under ~780px — pointless bytes.
 
 ---
+
+## Homepage sections added 27 Sep 2026
+
+Nathan asked what from grahamcochrane.com was worth borrowing. Three sections
+went on `index.html`, copy from his taste-interview answers (Personal Brand
+project doc `claude/taste-interview-log.md`), beats approved before copy:
+
+- `#problem` "Nobody is born a tech person." After the student quotes, before
+  the story. States his real thesis (everyone who uses a computer keeps
+  learning its tools; AI is the newest one), which the hero headline does not.
+- `#ladder` "Twenty minutes, then twenty hours." After the story, before the
+  diagnostic callout. The 20 min → 20 h → 100 h → 2,000 h ladder and the
+  5%ers / 80%ers split. **The 5% figure is his classroom gut, about one
+  student in twenty, and the copy says so. Never present it as research.**
+  Both COVID-story students stay unnamed, by his choice.
+- `#bio` "Introducing me at an event?" Above the signup. Long and short bios
+  in third person, wording approved by Nathan. **This is the canonical bio.**
+  Every fact is in the verified list above; "award-winning" is deliberately
+  absent.
+
+Graham's offer grid, challenge and podcast sections were skipped on purpose:
+nothing is for sale yet, and there is no YouTube episode 1. Named endorsements
+wait on consented quotes. CSS is appended at the end of `site.css`, scoped to
+`.ladder-steps` / `.bio-*`. Rendered at 1280 and 390px: 0px layout shift, no
+horizontal scroll.
 
 ## The tools section — built 1 Sep 2026
 

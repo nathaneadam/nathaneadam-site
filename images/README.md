@@ -294,3 +294,8 @@ under Selected talks.
 |---|---|---|
 | `nff-creators-conference.jpg` | Speaking, thumbnail | Festival hero art with "2026 Creators Conference". Browser chrome and site nav cropped out. 760×321, no `-sm` needed |
 | `nff-ai-panel.jpg` (+ `-sm`) | Speaking, plate inside the same entry | The program listing: panel title, description, Nathan as moderator. Cropped above the first panelist so nobody else's photo is on the site |
+
+**27 Sep 2026** — `og-card.jpg` and `og-card-profile.jpg` had "Associate
+Professor of Media Production" baked into the image. Repainted with the new
+title (Poppins Regular, same size, colour and baselines as the original text).
+`og-card-diagnostic.jpg` carries no title and was left alone.
