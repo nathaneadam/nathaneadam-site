@@ -236,3 +236,27 @@ Next, in order:
 4. **Claude:** draft the LinkedIn post announcing the diagnostic to former
    students, and the email asking a dozen of them for a named line.
 5. **Claude:** the assignment redesign helper, which `tools.html` promises.
+
+## Update, 27 Sep 2026: more borrowed from Graham
+
+Nathan asked what else on grahamcochrane.com was worth taking. Three sections
+went on `index.html`, then the whole middle of the page was restyled to
+Graham's layout (full-width colour bands, text beside photos, two-tone
+headlines):
+
+- **Problem section**, "Nobody is born a tech person." Graham's is "We all want
+  a life of fulfillment…". Nathan's states his real thesis, which the hero
+  headline does not.
+- **Personal message**, "Twenty minutes, then twenty hours." Graham's is "A
+  Message From Graham". Nathan's is the learning ladder and the 5%er / 80%er
+  split, with a photo collage.
+- **Official bio**, "Introducing me at an event?" Graham's is "About Graham
+  Cochrane". Nathan's exists so organisers stop copying wrong numbers.
+
+**Still deliberately not copied:** the offer grid ("How Graham Can Help You"),
+the $10K challenge, and the podcast block. Same reasons as above: nothing is
+for sale yet, and there is no YouTube episode 1. Named endorsements like
+Graham's wait on consented quotes from former students.
+
+The diagnostic callout now sits right after the ladder section, whose last
+line leads into it ("The diagnostic below takes two.").

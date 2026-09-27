@@ -4,7 +4,12 @@ Read this before changing anything. It records decisions that were expensive to
 reach, facts that were verified against primary sources, and a few traps in the
 local setup.
 
-Last updated: 1 September 2026, third session — **the site was turned into a
+Last updated: 27 September 2026 — **homepage restyled after
+grahamcochrane.com, three sections added, a new speaking credit, and the new
+title (Film, Television, and Media Production) on every page.** See "State as
+of 27 September 2026" near the bottom.
+
+Before that, 1 September 2026, third session — **the site was turned into a
 funnel for the diagnostic, and student testimonials went on.** Every one of
 the 23 pages now asks the same thing in the same words, "Take the AI Career
 Diagnostic"; the email became the second ask; five "nothing to sell" lines
@@ -48,7 +53,7 @@ years of sent email and saved as the `my-writing-style` skill; eight
 claims corrected; every press source finally archived; five more photos placed;
 and the discovery that the old DreamHost files are gone.
 
-**If you are starting a new session, read "State as of 1 September 2026" near the
+**If you are starting a new session, read "State as of 27 September 2026" and then "State as of 1 September 2026" near the
 bottom first, then "Editorial rules". Load the `my-writing-style` skill before
 drafting any copy.**
 
@@ -278,6 +283,12 @@ find .git \( -name "*.lock" -o -name "tmp_obj_*" \) -delete
 
 Deleting inside this folder needs the Cowork delete grant first
 (`allow_cowork_file_delete`). GitHub Desktop writes natively and never hits this.
+
+**The sandbox has no git identity either** (27 Sep 2026: `git commit` fails
+with "Author identity unknown"). The working pattern that session: Claude edits
+and runs `git add`, then Nathan commits and pushes from GitHub Desktop. Even
+`git add` can leave a stray `.git/index.lock`, which blocks GitHub Desktop, so
+run the cleanup line above after any git command from the sandbox.
 
 **Attachments auto-copy into `images/`.** Files the user uploads in chat appear
 in `images/` alongside processed versions, originals and all. A 3.7MB PNG nearly
@@ -537,6 +548,11 @@ Layout classes, in the order they were added:
 | `.btn-cta` | The single orange call to action |
 | `.notfound-links` | The page list on `404.html`. Used nowhere else. |
 | `.videogrid` | Grid of embedded talks. Each cell reuses `.video`, which fixes 16:9 — that is what keeps layout shift at zero with ~30 iframes. Never swap it for a fixed height. |
+| `.band` / `.band--dark` `--light` `--tint` `--slate` | Full-width colour bands on the homepage. Added 27 Sep 2026. Homepage only. |
+| `.split` / `.split--media-first` / `.split-text` / `.split-media` | Text beside a photo, photo vertically centred. Stacks below 760px with the photo first. |
+| `.collage` (`.c1` `.c2` `.c3`) | Three overlapping photos in `#ladder`, all positioned in % so it scales as one piece. |
+| `.ladder-steps` | Numbered-circle list in `#ladder`. |
+| `.bio-card` | The two bio boxes in `#bio`. |
 | `.projectgrid` / `.projectcard` | Card grid on `projects.html`. Thumbnails crop to 3:2 with `object-fit:cover`, so unlike `.band` a wide crop here is intended — but pick images without faces at the frame edges. |
 
 **Pair images must share an aspect ratio** or the columns run ragged. That's why
@@ -612,8 +628,9 @@ project doc `claude/taste-interview-log.md`), beats approved before copy:
   Both COVID-story students stay unnamed, by his choice.
 - `#bio` "Introducing me at an event?" Above the signup. Long and short bios
   in third person, wording approved by Nathan. **This is the canonical bio.**
-  Every fact is in the verified list above; "award-winning" is deliberately
-  absent.
+  Every fact is in the verified list above. "Award-winning" is defensible
+  (`BIO-CORRECTIONS.md`, 31 Aug) but is not in the wording Nathan approved,
+  so leave it out unless he asks.
 
 **Restyled the same day to Graham's visual layout, at Nathan's request.**
 The four sections from `#problem` to `#bio` (including the existing `#story`)
@@ -1126,7 +1143,58 @@ because four entries on `credits.html` still have no page.
   `github.com/nathaneadam/nathaneadam-site`. The side effect was breaking
   Vercel's Git link — see "The repo move broke Vercel" under **Deployment**.
 
-## State as of 1 September 2026 — read this first in a new session
+## State as of 27 September 2026 — read this first in a new session
+
+**One-paragraph version:** a speaking credit went on, the homepage gained
+three sections and a new look borrowed from grahamcochrane.com, and Nathan's
+title changed everywhere. All of it is pushed and live (last commit `68b58b6`
+plus whatever Nathan pushed after it). Nothing is half-built.
+
+What happened, in order:
+
+1. **Nashville Film Festival panel on `speaking.html`.** Nathan moderated the
+   Creators Conference opening panel, 25 Sep 2026. First entry under
+   Selected talks, with two cropped screenshots of the festival page
+   (`nff-creators-conference.jpg`, `nff-ai-panel.jpg`). Facts are under
+   Verified facts. **Open:** no Wayback link yet; Nathan to archive the
+   festival URL. There is a `TODO (Nathan)` comment in the markup.
+2. **Title changed site-wide** to *Associate Professor of Film, Television,
+   and Media Production*, confirmed by Nathan. All 23 pages, the JSON-LD, the
+   footers, and the two og cards that had the old title printed on them
+   (`og-card.jpg`, `og-card-profile.jpg`, repainted with Pillow in Poppins
+   Regular at the original size, colour and baselines).
+3. **Three homepage sections** (`#problem`, `#ladder`, `#bio`), copy from
+   the taste interview, then **restyled to Graham's layout**: colour bands,
+   text beside photos, a three-photo collage, two-tone headlines. Then the
+   `#problem` and `#ladder` copy was cut roughly in half so the text column
+   matches the photo height. See "Homepage sections added 27 Sep 2026".
+   The "Use this one. It has the right numbers." line under the bio heading
+   was removed at Nathan's request.
+
+**The visual check finally happened.** Every earlier session recorded that
+nobody could see the site rendered, because Chrome will not open `file://`.
+The fix is to stage the HTML, CSS and images into the cloud sandbox and
+screenshot them with headless Chromium through Playwright (preinstalled; do
+not run `playwright install`). That was done at 1280px and 390px for every
+change on 27 Sep, with a layout-shift and horizontal-scroll check each time.
+**Use this route for any future visual check.** The diagnostic and the
+1 Sep callouts can be checked the same way; they still have not been.
+
+**Waiting on Nathan, new since 1 Sep:**
+
+- Archive `nashvillefilmfestival.org/2026-festival/creators-conference-2026/`
+  at web.archive.org/save and send back the link.
+- **The two bio-correction drafts in Gmail still carry the OLD title** and
+  the old bio block. They must be updated before sending. See
+  `BIO-CORRECTIONS.md`, which now points at the homepage bio as the
+  paste-ready version.
+
+**Good next moves** are unchanged from the 1 Sep list below, plus one: the
+"two camps" paragraph and the "if you'd rather shoot on film, I support you"
+concession were cut from the homepage for length, and both are ready-made
+newsletter material.
+
+## State as of 1 September 2026
 
 ### The very latest: the tools section shipped
 

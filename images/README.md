@@ -11,7 +11,7 @@ that used to live here has been removed — every `<img>` now points at a real f
 |---|---|---|
 | `portrait.jpg` | Homepage hero | 2023 TEDx Nashville headshot, 1000×1249 (4:5). Shown **whole** — see the hero warning below |
 | `nate-bargatze.jpg` | Homepage story section | With Nate Bargatze and four friends. 1200×882. Replaced `teaching.jpg` on 27 Aug 2026 at Nathan's request |
-| `teaching.jpg` | **Unused** | Teaching at a board in a darkened studio. Kept in case a teaching photo is wanted back — it's the only one of him actually mid-lesson |
+| `teaching.jpg` | Homepage `#problem` | At a console with two students leaning in. The only photo of him mid-lesson. Unused until 27 Sep 2026 |
 | `early-guitar.jpg` | About | Teenage Nathan with an electric guitar. Square. |
 | `console.jpg` | About | Younger, at a large analog desk. Square, pairs with the above. |
 | `grammy-camp.jpg` | About · **GRAMMY Camp band** · **Projects card** | Students around a console |
@@ -299,3 +299,13 @@ under Selected talks.
 Professor of Media Production" baked into the image. Repainted with the new
 title (Poppins Regular, same size, colour and baselines as the original text).
 `og-card-diagnostic.jpg` carries no title and was left alone.
+
+**27 Sep 2026, homepage restyle** — no new photos, but four existing ones took
+new jobs on `index.html`:
+
+| File | Where | Notes |
+|---|---|---|
+| `teaching.jpg` | `#problem`, beside the text | 718px wide, so no `-sm` |
+| `nate-bargatze.jpg` | `#story`, now beside the text rather than inline | Same file, same caption |
+| `console.jpg`, `vision-pro.jpg`, `shooting-video.jpg` | `#ladder` collage | Audio, VR, video: the skill-stacking the section argues for. Cropped by CSS (`object-fit:cover`) to 1:1, 9:16 and 3:2 |
+| `tedx-stage.jpg` | `#bio`, beside the two bios | Also on `speaking.html` |

@@ -47,6 +47,23 @@ There's no framework here on purpose. Any text editor works. Nothing to install,
 nothing to keep updated, nothing that breaks in eighteen months when a dependency
 goes stale.
 
+## The homepage, top to bottom (as of 27 Sep 2026)
+
+Hero, "Featured in" strip, proof bar, student quotes, then four sections in
+full-width colour bands modelled on grahamcochrane.com: **Nobody is born a
+tech person** (navy), **Why I'm doing this**, **Twenty minutes, then twenty
+hours** (the learning ladder, with a photo collage), the diagnostic callout,
+What you'll find here, **Introducing me at an event?** (the official bio, on
+slate), and the newsletter signup.
+
+**The bio in that last section is the official one.** Copy it from there when
+anyone asks for a bio. His title is *Associate Professor of Film, Television,
+and Media Production*; it changed on every page on 27 Sep 2026.
+
+**Keep those sections short.** Text sits beside a photo, so the layout only
+looks right when the text is about as tall as the photo. Roughly 100 to 150
+words per section.
+
 ## Things that are easy to get wrong
 
 **One stylesheet, every page.** `css/site.css` is shared. Changing a colour or a
@@ -80,7 +97,9 @@ now show what their caption says. Adding one means checking that again.
 **Always look at a phone.** Every layout bug this site has shipped was a
 small-screen bug that looked fine on a laptop: a portrait cropped through the
 subject's forehead, a hero that never stacked, a group photo squeezed into a
-letterbox. Resize the browser to about 390px wide before you commit.
+letterbox. Resize the browser to about 390px wide before you commit. (Claude
+can do this check itself by screenshotting the pages in its own sandbox; see
+CLAUDE.md, "State as of 27 September 2026".)
 
 **To change the diagnostic's wording, edit `tools/content.js` and nothing else.**
 Every headline, question, answer and paragraph the visitor reads is a plain
@@ -112,15 +131,15 @@ that number here too.
 - **Newsletter** — beehiiv, free Launch plan, publication "Nathan's Newsletter".
   Form UUID `11848ad5-53ac-456d-8cec-428670527667`
 
-**The diagnostic's email gate is currently soft**, meaning the subscribe form
-shows with a visible "no thanks, show me anyway" link under it. Turning on the
-real gate needs a **second** beehiiv form whose post-subscribe redirect points at
-`/tools/career-pivot-result.html`; its UUID then goes into `GATE.formUuid` in
-`tools/diagnostic.js` and `GATE.mode` flips to `"beehiiv"`. It has to be a second
-form because the redirect belongs to the form, not to the link — reusing the
-homepage UUID would send homepage subscribers to a diagnostic results page.
-Never flip that switch before the redirect exists, and never fake it with an
-unlock button that works whether or not somebody subscribed.
+**The diagnostic's email gate is real** (since 1 Sep 2026). It uses a
+**second** beehiiv form, "Diagnostic gate - career pivot result", UUID
+`712946f7-3291-4efe-b002-6c65f0458621`, whose post-subscribe redirect points at
+`/tools/career-pivot-result.html`. It has to be a second form because the
+redirect belongs to the form, not to the link: reusing the homepage UUID would
+send homepage subscribers to a diagnostic results page. If the gate ever has to
+go back to soft (`GATE.mode = "soft"`), the "show me anyway" link must come back
+with it. Never fake it with an unlock button that works whether or not somebody
+subscribed.
 
 **Email authentication is deliberately undone.** `nathaneadam.com` has no SPF, no
 DKIM and no DMARC. Inbound mail works — the Google Workspace MX survived the
