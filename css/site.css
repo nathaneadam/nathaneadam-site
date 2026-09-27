@@ -720,7 +720,6 @@ section.band, section.band + section{border-top:none;}
 .ladder-steps li:last-child{border-bottom:1px solid var(--line);}
 .ladder-steps li::before{content:counter(step);position:absolute;left:0;top:12px;width:34px;height:34px;border-radius:50%;background:var(--deep);color:#fff;font-family:var(--font-display);font-weight:600;font-size:16px;display:flex;align-items:center;justify-content:center;}
 
-.bio-lede{margin-bottom:24px;}
 .bio-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:8px;padding:22px 26px;margin-bottom:18px;}
 .bio-card .eyebrow{color:var(--sky);}
 .band--slate .bio-card p{color:#eef2f5;margin:8px 0 0;font-size:17px;}
