@@ -395,6 +395,15 @@ Hold the line.
   with Best Buy Teen Tech Centers and the Boys and Girls Club, 80+ students
   across three tracks. Source: the 2017 Belmont News piece. Not yet on the site.
 
+- **Nashville Film Festival Creators Conference, 25 Sep 2026.** Moderated the
+  opening panel, *Balancing Innovation and Artistic Rights: AI in Music & Film*,
+  10–11am at NMAAM, presented by Belmont's Curb College. Panelists: Jackie Jones
+  (RIAA), Marc Rucker (SoundExchange), Charles Alexander (Launcher, ViNIL), Nikki
+  Hexum (Human Consent Foundation). Source: the festival page, read 27 Sep 2026.
+  On `speaking.html`. **No archive link yet** — Nathan to submit the URL to
+  web.archive.org/save. The festival bills him as "Associate Professor of Film,
+  Television, and Media Production"; the site keeps its own shorter title.
+
 ### Added 31 Aug 2026 — all confirmed by Nathan directly
 
 - **Presleys' Country Jubilee: 2009–2015, episodes 1 through 142**, all cut by

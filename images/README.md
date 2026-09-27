@@ -285,3 +285,12 @@ and she's credited on-page. The Peter Pan playbill is the production's
 promotional artwork — standard practice for illustrating a credit, but it isn't
 Nathan's image. A still from the performance video would be safer if that ever
 matters.
+
+**Added 27 Sep 2026** — screenshots of the Nashville Film Festival site, cropped
+from Nathan's own browser captures. Both are on `speaking.html`, first entry
+under Selected talks.
+
+| File | Where | Notes |
+|---|---|---|
+| `nff-creators-conference.jpg` | Speaking, thumbnail | Festival hero art with "2026 Creators Conference". Browser chrome and site nav cropped out. 760×321, no `-sm` needed |
+| `nff-ai-panel.jpg` (+ `-sm`) | Speaking, plate inside the same entry | The program listing: panel title, description, Nathan as moderator. Cropped above the first panelist so nobody else's photo is on the site |
