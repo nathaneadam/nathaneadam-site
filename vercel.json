@@ -1,0 +1,6 @@
+{
+  "rewrites": [
+    { "source": "/softwareguides", "destination": "https://stepguide.vercel.app/softwareguides" },
+    { "source": "/softwareguides/:path*", "destination": "https://stepguide.vercel.app/softwareguides/:path*" }
+  ]
+}

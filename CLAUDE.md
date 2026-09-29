@@ -102,7 +102,7 @@ projects/         One page per project. Same template as the top-level pages
   landr-pro-tools.html            ┘
 css/site.css      Every style for every page
 js/nav.js         Mobile menu toggle — the only script, loaded on every page
-sitemap.xml       Twenty-one URLs, hand-maintained. New page means a new entry
+sitemap.xml       Twenty-two URLs, hand-maintained. New page means a new entry
                   here. career-pivot-result.html is deliberately absent.
 robots.txt        Allows everything, points at the sitemap
 images/           See images/README.md
@@ -147,6 +147,29 @@ costs 30 more image files and some JS, which is why it wasn't done first.
 
 **Nathan pushes, not Claude.** Auth lives in his macOS keychain via GitHub
 Desktop. Claude can commit locally; the push is his click.
+
+### /softwareguides lives in a different project — added 29 Sep 2026
+
+`vercel.json` (the site's only one) rewrites `/softwareguides` and
+`/softwareguides/*` to `stepguide.vercel.app`, a separate Next.js app: the
+student software guides built with StepGuide
+(`Dropbox/CLAUDE/Projects/AI Screen Recorder`, see its `CLAUDE.md`). That app
+is built with `basePath: "/softwareguides"`, so its pages, images and
+`_next` assets all sit under that prefix and pass through the rewrite.
+**Nothing for the guides lives in this repo** — publishing a guide is the
+Deploy button in the StepGuide editor, not a push here. Don't add a
+`softwareguides/` folder or `softwareguides.html` here: Vercel serves real
+files before applying rewrites, so it would hide the guides.
+
+**Where the site links to it** (same day): `Guides` in the nav of all 23
+pages, `Software Guides` in every footer (both right after Tools, both the
+root-relative `/softwareguides` so no `../` juggling), a "For my students"
+card on `tools.html` (ghost button, because the orange CTA is reserved for the
+diagnostic), and a 22nd sitemap URL. The Tools lede's "first half is free,
+the rest comes with the email" line describes the diagnostic; the guides sit
+in their own section below it so the card doesn't contradict it. Nav checked
+at 780px (one row, 20px to spare before the name), 1024px, and 375px (menu).
+Locally the link 404s: the rewrite only exists on Vercel.
 
 ### The repo move broke Vercel — 27 Aug 2026
 
