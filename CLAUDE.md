@@ -9,6 +9,21 @@ grahamcochrane.com, three sections added, a new speaking credit, and the new
 title (Film, Television, and Media Production) on every page.** See "State as
 of 27 September 2026" near the bottom.
 
+**30 October 2026 — "Midnight" restyle, site-wide.** Black stage, Inter
+instead of Poppins, pill buttons, 28px rounded photos and cards, no drop
+shadows, grey second half on two-tone headlines. **The orange CTA is retired:
+blue `#0071e3` with white text is now the one action colour** (white on that
+blue passes contrast; the old dark-text-on-orange rule no longer applies).
+All of it is ONE block appended at the end of `css/site.css` under the
+"MIDNIGHT RESTYLE" banner, plus the Inter `<link>` on all 23 pages. To roll
+back: delete that block and swap the font link back to Poppins. `--deep` now
+means light "strong ink", not navy, so any new rule must not use it as a
+background. Checked at 1280px and 390px with Playwright: no horizontal
+scroll, phone menu and diagnostic questions render correctly. **Still to do
+by hand:** restyle both beehiiv forms (homepage `11848ad5-...` and gate
+`712946f7-...`) in beehiiv's builder, because their iframes still carry the
+navy input and orange button.
+
 Before that, 1 September 2026, third session — **the site was turned into a
 funnel for the diagnostic, and student testimonials went on.** Every one of
 the 23 pages now asks the same thing in the same words, "Take the AI Career
@@ -440,6 +455,13 @@ Hold the line.
   On `speaking.html`. **No archive link yet** — Nathan to submit the URL to
   web.archive.org/save. The festival bills him as "Associate Professor of Film,
   Television, and Media Production"; the site keeps its own shorter title.
+- **Belmont News, 29 Oct 2026**, *Make It Here: Belmont Faculty Experts on
+  Nashville's Growing Film and Media Scene*, by Benjamin Stratton DeVerter.
+  Quotes Nathan on AI ("you still need somebody that knows what good video
+  looks like") and the "cocoon of talent". Added 30 Oct 2026 to the NFF entry
+  on `speaking.html` with a screenshot (`belmont-news-nff-2026.jpg`). Two
+  cautions: it says he "spoke on panels" without naming this one, and it uses
+  his OLD title. No archive link yet.
 
 ### Added 31 Aug 2026 — all confirmed by Nathan directly
 
