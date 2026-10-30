@@ -2,6 +2,48 @@
 
 Drafted 30 October 2026. Read it cold: it assumes you remember nothing from the chat.
 
+## Two standing rules — set by Nathan, 30 October 2026
+
+1. **Every mention gets a visual.** If the text names a light, a piece of
+   gear, a setting, a number or a setup, there is a picture, drawing or
+   diagram right beside it. Text alone is not finished.
+2. **Gear gets a "See on Amazon" link** so students can click through. Use
+   Amazon SEARCH links (`amazon.com/s?k=softbox+lighting+kit`), not single
+   products: they never go dead and don't endorse a brand. Every page says
+   so in its credit line. If Nathan sets up Amazon Associates later, add his
+   tag to each link AND an affiliate disclosure line on the page.
+
+## Status — 30 October 2026, night: all three pilot lessons built
+
+- `learn/three-point-lighting.html` — now with a picture of the head lit by
+  each light alone, gear drawings (softbox, LED panel, window, foam board,
+  reflector, Fresnel, LED tube) with Amazon links, three ratio pictures
+  (2:1, 4:1, 8:1), drawings in the home kit and an overhead diagram of the
+  home setup. The light brightness was turned down (BASE 2.0) so the shadow
+  side actually shows; the back light was turned up to match.
+- `learn/levels-and-clipping.html` — a real voice through a pretend recorder:
+  record level, 0 dBFS ceiling, recorder hiss, then an edit volume. Clipping
+  stays red in the waveform when you turn it down, which is the lesson. Voice
+  is the LibriVox Gettysburg Address (public domain), credited on the page.
+  Two playable "which one can you fix?" clips, meter diagram, clean vs clipped
+  close-ups, recorder/interface/camera/lav drawings, mic-distance diagram.
+- `learn/aperture.html` — the same head in front of a bookshelf and string
+  lights with depth-of-field blur (three.js BokehPass, bundled locally as
+  `learn/vendor/three/addons/postprocessing.js`). f/1.4 to f/16, background
+  distance, auto exposure with ISO grain. Labelled as a simulation on the page.
+  **Accuracy note:** most phones have a FIXED aperture. The lesson teaches
+  distance and Portrait mode for phones, A/Av mode for cameras. The plan text
+  further down that mentions "the Blackmagic Camera app's aperture control"
+  was wrong for iPhones; don't repeat it.
+- `learn/index.html` shows all three as cards. `sitemap.xml` has 26 URLs.
+- `learn-src/` holds the scripts that drew the gear and built the two new
+  pages. Read its README before adding a lesson or a drawing.
+- Checked at 1280px and 390px: every step and quiz works, no sideways
+  scroll, no layout shift, every image has width/height.
+
+**Next, per the pilot:** stop building. Put all three in front of a 1450
+section for two weeks, then decide what to change before lesson four.
+
 ## Status — 30 October 2026, evening
 
 **Pilot lesson 1 of 3 is built: three-point lighting.** Not pushed yet.
@@ -108,7 +150,8 @@ Here is the aperture lesson, so the pattern is concrete:
 4. **The rule, after the example.** Two sentences. Small f-number, big
    opening, blurry background. Big f-number, small opening, more in focus.
 5. **Try it with your phone.** A two-minute assignment. Portrait mode, or
-   the Blackmagic Camera app's aperture control. Shoot both versions.
+   a camera in A/Av mode. On most phones the aperture is fixed, so change
+   the distances instead. Shoot both versions.
 6. **Check.** Five questions. Every answer explains itself, right or wrong.
 7. **Next.** The next lesson, and a link to practise in the Camera
    Simulator.

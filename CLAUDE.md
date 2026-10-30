@@ -9,7 +9,7 @@ grahamcochrane.com, three sections added, a new speaking credit, and the new
 title (Film, Television, and Media Production) on every page.** See "State as
 of 27 September 2026" near the bottom.
 
-**30 October 2026, later — Learn section started.** A free interactive video production course at `learn/` (nathaneadam.com/learn/), modelled on the old CyberCollege course (topic list only; its text and images are copyrighted). First lesson built: `learn/three-point-lighting.html`, a 3D head you light by dragging lights on a map. It has its own stylesheet (`learn/learn.css`) and its own copy of three.js. **Read `LEARN-PLAN.md` (its Status section first) before touching any of it.** The 3D head is CC BY 3.0 and its credit line must stay.
+**30 October 2026, later — Learn section started.** A free interactive video production course at `learn/` (nathaneadam.com/learn/), modelled on the old CyberCollege course (topic list only; its text and images are copyrighted). Three lessons built (three-point lighting, levels and clipping, aperture). Two standing rules: every mention gets a visual, and gear gets an Amazon search link. It has its own stylesheet (`learn/learn.css`) and its own copy of three.js. **Read `LEARN-PLAN.md` (its Status section first) before touching any of it.** The 3D head is CC BY 3.0 and its credit line must stay.
 
 **30 October 2026 — "Midnight" restyle, site-wide.** Black stage, Inter
 instead of Poppins, pill buttons, 28px rounded photos and cards, no drop

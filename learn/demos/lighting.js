@@ -19,8 +19,8 @@ const COLORS = { key: '#ffd60a', fill: '#64d2ff', back: '#bf5af2' };
 const HEIGHT_DEG = { low: -32, eye: 0, high: 35 };
 const R_MIN = 35, R_MAX = 88, R_REF = 70;
 const MAP_TO_3D = 0.42;          // one map unit in scene units
-const STRENGTH = { key: 1, fill: 1, back: 3 }; // back light grazes, needs more
-const BASE = 3.4;                // light reaching the face at R_REF, 100%
+const STRENGTH = { key: 1, fill: 1, back: 5 }; // back light grazes the edge, needs more
+const BASE = 2.0;                // light reaching the face at R_REF, 100%
 const SVGNS = 'http://www.w3.org/2000/svg';
 
 export const START = {
