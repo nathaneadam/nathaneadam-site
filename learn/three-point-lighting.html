@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Three-point lighting: light a face yourself &mdash; Nathan E Adam</title>
+<meta name="description" content="A free interactive lesson. Drag a key, fill and back light around a 3D head and see what each one does, then try Rembrandt, split and butterfly lighting. About 20 minutes, works on a phone.">
+<link rel="canonical" href="https://www.nathaneadam.com/learn/three-point-lighting.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Three-point lighting: light a face yourself">
+<meta property="og:description" content="Drag three lights around a 3D head and watch the face change. A free 20-minute lesson.">
+<meta property="og:url" content="https://www.nathaneadam.com/learn/three-point-lighting.html">
+<meta property="og:image" content="https://www.nathaneadam.com/learn/media/og-three-point-lighting.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="A 3D head lit with three-point lighting beside an overhead map of the key, fill and back lights.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.nathaneadam.com/learn/media/og-three-point-lighting.jpg">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%23132a3e'/><text x='50' y='69' font-family='Helvetica,Arial,sans-serif' font-weight='600' font-size='58' fill='%23f7f5f1' text-anchor='middle'>N</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../css/site.css">
+<link rel="stylesheet" href="learn.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LearningResource",
+  "name": "Three-point lighting",
+  "description": "An interactive lesson on key, fill and back light, using a 3D head and an overhead lighting map.",
+  "learningResourceType": "Interactive lesson",
+  "educationalLevel": "Beginner",
+  "timeRequired": "PT20M",
+  "inLanguage": "en",
+  "isAccessibleForFree": true,
+  "url": "https://www.nathaneadam.com/learn/three-point-lighting.html",
+  "isPartOf": { "@type": "Course", "name": "Video basics", "url": "https://www.nathaneadam.com/learn/" },
+  "author": { "@type": "Person", "name": "Nathan Adam", "url": "https://www.nathaneadam.com/" }
+}
+</script>
+<script type="importmap">{ "imports": { "three": "./vendor/three/three.module.min.js" } }</script>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="../index.html">Nathan&nbsp;E&nbsp;Adam</a>
+    <button class="navtoggle" type="button" aria-expanded="false" aria-controls="sitenav" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="topnav" id="sitenav">
+      <a href="../about.html">About</a>
+      <a href="../credits.html">Credits</a>
+      <a href="../speaking.html">Speaking</a>
+      <a href="../projects.html">Projects</a>
+      <a href="../tools.html">Tools</a>
+      <a href="/softwareguides">Guides</a>
+      <a href="../tools/career-pivot.html" class="nav-cta">Take the AI Career Diagnostic</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <div class="pagehead wrap">
+    <div class="eyebrow"><a href="./">Video basics</a> &middot; Light</div>
+    <h1>Three-point lighting</h1>
+    <p class="lede">One lamp in the wrong place makes anybody look like their passport photo. Three lamps in the right places make them look like they belong on the evening news. Same face, same camera. This lesson is about where the lights go.</p>
+    <div class="lesson-meta"><span>About 20 minutes</span><span>Works on a phone</span><span>Free, no sign-up</span></div>
+  </div>
+
+  <!-- 1. Example first: two pictures, one guess -->
+  <section class="lesson-sec" id="guess">
+    <div class="wrap">
+      <p class="lesson-kicker">Start here</p>
+      <h2>What changed?</h2>
+      <div class="lesson-pair">
+        <figure>
+          <img src="media/tpl-flat.jpg" srcset="media/tpl-flat-sm.jpg 700w, media/tpl-flat.jpg 1200w" sizes="(max-width:760px) 50vw, 500px" width="1200" height="900" alt="A head lit by one light beside the camera. Bright, flat, almost no shadows.">
+          <figcaption><b>A.</b> One light</figcaption>
+        </figure>
+        <figure>
+          <img src="media/tpl-three.jpg" srcset="media/tpl-three-sm.jpg 700w, media/tpl-three.jpg 1200w" sizes="(max-width:760px) 50vw, 500px" width="1200" height="900" alt="The same head with three-point lighting. One side bright, the other in soft shadow, a rim of light along the back of the head.">
+          <figcaption><b>B.</b> Three lights</figcaption>
+        </figure>
+      </div>
+      <div class="lesson-q" id="lesson-hook">
+        <h3>Same face. Same camera. Same settings. What changed in picture B?</h3>
+        <div class="lesson-opts"></div>
+        <p class="lesson-reveal" hidden></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. The demo -->
+  <section class="lesson-sec" id="stage">
+    <div class="wrap">
+      <p class="lesson-kicker">Try it</p>
+      <h2>Light it yourself.</h2>
+      <div class="measure">
+        <p>This is a 3D scan of a real person&rsquo;s head, with three lights you can move. The map shows the room from above: his head in the middle, the camera at the bottom, the back wall at the top. Drag a light, or tap the floor to send the selected one there. Pick a light underneath the map to switch it on and off, change its brightness, or raise and lower it.</p>
+      </div>
+      <div id="lesson-demo">
+        <noscript><p class="lesson-reveal">The demo needs JavaScript. The two pictures above show the same idea.</p></noscript>
+      </div>
+      <div class="lesson-steps" id="lesson-steps"></div>
+    </div>
+  </section>
+
+  <!-- 3. The rule, after the example -->
+  <section class="lesson-sec" id="lights">
+    <div class="wrap">
+      <p class="lesson-kicker">What you just did</p>
+      <h2>Three lights, three jobs.</h2>
+      <div class="lesson-cards">
+        <div class="lesson-card">
+          <h3><i style="--c:#ffd60a"></i>Key</h3>
+          <p>The main light. It makes the shadows, and the shadows make the shape of the face.</p>
+          <p>Usually 30° to 45° to one side of the camera and a little above eye level, angled down. If you only have one light, it&rsquo;s your key.</p>
+        </div>
+        <div class="lesson-card">
+          <h3><i style="--c:#64d2ff"></i>Fill</h3>
+          <p>Fills in the shadows the key made. It goes on the other side of the camera, and it&rsquo;s dimmer, softer or farther away.</p>
+          <p>Its job is to decide how dark the shadow side gets. Not to get rid of it.</p>
+        </div>
+        <div class="lesson-card">
+          <h3><i style="--c:#bf5af2"></i>Back</h3>
+          <p>Behind the person and high, aimed at the back of the head and shoulders. It draws an edge of light that separates them from the background.</p>
+          <p>You&rsquo;ll also hear it called a rim light or a hair light.</p>
+        </div>
+      </div>
+      <p class="lesson-credits" style="margin-top:14px;">The colours on the map are only labels. All three lights are plain white.</p>
+    </div>
+  </section>
+
+  <section class="lesson-sec" id="ratio">
+    <div class="wrap">
+      <div class="measure">
+        <p class="lesson-kicker">How much fill?</p>
+        <h2>The ratio.</h2>
+        <p>A sitcom is lit bright and even. A crime drama lets half the face fall into the dark. A lot of that difference comes down to one number.</p>
+        <p>Lighting people call it the key-to-fill ratio. It compares the bright side of the face with the shadow side. 2:1 means the bright side gets twice as much light. The bigger the first number, the darker the shadows.</p>
+      </div>
+      <ul class="lesson-ratios">
+        <li><b>2:1</b><span>Bright and friendly. Sitcoms, news desks, most YouTube.</span></li>
+        <li><b>4:1</b><span>Some drama. Plenty of interviews and films sit around here.</span></li>
+        <li><b>8:1+</b><span>Film noir. Half the face lives in the shadows.</span></li>
+      </ul>
+      <div class="measure">
+        <p>These are starting points, not laws. The way I see it, if it looks good to you, it&rsquo;s right. If the shadow side bothers you, move the fill. If it doesn&rsquo;t, leave it alone.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Try it with your phone -->
+  <section class="lesson-sec" id="home">
+    <div class="wrap">
+      <div class="measure">
+        <p class="lesson-kicker">Try it at home</p>
+        <h2>You don&rsquo;t need a lighting kit.</h2>
+        <p>You need a friend, a chair, a plain wall a few feet behind them, your phone, and three things you probably already own.</p>
+      </div>
+      <div class="lesson-kit">
+        <div><b>Key</b>A lamp with the shade off, or a window.</div>
+        <div><b>Fill</b>A white poster board, foam board or white wall to bounce the key&rsquo;s light back.</div>
+        <div><b>Back</b>A second lamp, behind them and out of frame.</div>
+      </div>
+      <ol class="lesson-do">
+        <li>Turn off the overhead lights. Take one photo with just the ceiling light first, for comparison.</li>
+        <li>Put the lamp about 45° to one side and a little above their eyes. Take a photo.</li>
+        <li>Hold the white board on the other side, close to their face but just out of frame. Move it closer and farther and watch the shadow side change. Take a photo.</li>
+        <li>Put the second lamp behind them, high, on the side across from the key. Take a photo.</li>
+        <li>Line up all four. I bet you delete the first one. :)</li>
+      </ol>
+      <div class="measure"><p style="font-size:15px;color:var(--ash);">Lamps get hot. Keep bulbs away from the board and anything else that can scorch.</p></div>
+    </div>
+  </section>
+
+  <!-- 5. Quiz -->
+  <section class="lesson-sec" id="check">
+    <div class="wrap">
+      <p class="lesson-kicker">Five questions</p>
+      <h2>Check yourself.</h2>
+      <div class="lesson-quiz" id="lesson-quiz"></div>
+      <div class="lesson-score" id="lesson-score" hidden>
+        <h3></h3>
+        <p></p>
+        <button type="button" class="btn btn-ghost"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Next -->
+  <section class="lesson-sec" id="next">
+    <div class="wrap">
+      <div class="lesson-next">
+        <div>
+          <p class="lesson-kicker">Up next in Light</p>
+          <h2>Hard and soft light.</h2>
+          <p>Why a bare bulb and a window give the same face completely different shadows. That lesson isn&rsquo;t built yet. If you&rsquo;d like to hear when it is, <a href="../index.html#join">get the weekly email</a>.</p>
+        </div>
+        <div class="btns">
+          <a class="btn btn-cta" href="./">See the whole course</a>
+        </div>
+      </div>
+      <p class="lesson-credits">The head is <em>Infinite, 3D Head Scan</em> by Lee Perry-Smith, licensed under <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">Creative Commons Attribution 3.0</a>, from the <a href="https://github.com/mrdoob/three.js/tree/r170/examples/models/gltf/LeePerrySmith" target="_blank" rel="noopener">three.js examples</a>. The 3D runs on <a href="https://threejs.org/" target="_blank" rel="noopener">three.js</a>, stored on this site so nothing loads from anyone else&rsquo;s server.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="flinks">
+      <a href="../about.html">About</a>
+      <a href="../credits.html">Credits</a>
+      <a href="../speaking.html">Speaking</a>
+      <a href="../projects.html">Projects</a>
+      <a href="../tools.html">Tools</a>
+      <a href="./">Learn</a>
+      <a href="/softwareguides">Software Guides</a>
+      <a href="https://www.linkedin.com/in/nathaneadam/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.belmont.edu/profiles/nathan-adam/" target="_blank" rel="noopener">Belmont faculty page</a>
+      <a href="mailto:nathan@nathaneadam.com">Email</a>
+    </div>
+    <p class="fmeta">Dr. Nathan Adam &mdash; professor of film, television, and media production at Belmont University. Nashville, Tennessee.<br>
+    &copy; <span id="yr">2026</span> Nathan E Adam. Built in public.</p>
+  </div>
+</footer>
+
+<script src="../js/nav.js" defer></script>
+<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+<script src="content/three-point-lighting.js"></script>
+<script type="module" src="lesson.js"></script>
+</body>
+</html>
