@@ -645,7 +645,7 @@ project doc `claude/taste-interview-log.md`), beats approved before copy:
   the story. States his real thesis (everyone who uses a computer keeps
   learning its tools; AI is the newest one), which the hero headline does not.
 - `#ladder` "Twenty minutes, then twenty hours." After the story, before the
-  diagnostic callout. The 20 min → 20 h → 100 h → 2,000 h ladder and the
+  diagnostic callout. The 20 min → 20 h → 200 h → 2,000 h ladder (third rung changed from 100 h to 200 h by Nathan, 21 Oct 2026) and the
   5%ers / 80%ers split. **The 5% figure is his classroom gut, about one
   student in twenty, and the copy says so. Never present it as research.**
   Both COVID-story students stay unnamed, by his choice.
