@@ -452,8 +452,8 @@ Hold the line.
   10–11am at NMAAM, presented by Belmont's Curb College. Panelists: Jackie Jones
   (RIAA), Marc Rucker (SoundExchange), Charles Alexander (Launcher, ViNIL), Nikki
   Hexum (Human Consent Foundation). Source: the festival page, read 27 Sep 2026.
-  On `speaking.html`. **No archive link yet** — Nathan to submit the URL to
-  web.archive.org/save. The festival bills him as "Associate Professor of Film,
+  On `speaking.html`. Archived 30 Oct 2026 (web/20261030211722); the 5 Oct
+  capture is incomplete, don't use it. The festival bills him as "Associate Professor of Film,
   Television, and Media Production"; the site keeps its own shorter title.
 - **Belmont News, 29 Oct 2026**, *Make It Here: Belmont Faculty Experts on
   Nashville's Growing Film and Media Scene*, by Benjamin Stratton DeVerter.
@@ -461,7 +461,7 @@ Hold the line.
   looks like") and the "cocoon of talent". Added 30 Oct 2026 to the NFF entry
   on `speaking.html` with a screenshot (`belmont-news-nff-2026.jpg`). Two
   cautions: it says he "spoke on panels" without naming this one, and it uses
-  his OLD title. No archive link yet.
+  his OLD title. Archived 30 Oct 2026 (web/20261030211741).
 
 ### Added 31 Aug 2026 — all confirmed by Nathan directly
 
