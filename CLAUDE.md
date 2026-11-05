@@ -9,6 +9,8 @@ grahamcochrane.com, three sections added, a new speaking credit, and the new
 title (Film, Television, and Media Production) on every page.** See "State as
 of 27 September 2026" near the bottom.
 
+**4 November 2026 — new credit: David Allan Coe, "A Million Reasons" music video.** `projects/a-million-reasons.html` (first card under Film, video and production), a with-shot entry at the top of "Music & audio engineering" on `credits.html`, and a sitemap URL. **Nathan's role is EDITOR ONLY** — not director, not producer — and the finished video uses **no AI** (an early plan to animate stills was dropped). The Whiskey Riff premiere (Aaron Ryan, 4 Nov 2026) names nobody on the video team, so the credit rests on Nathan's word; do not upgrade it. YouTube `Kr0AwU2SUq8` on Coe's channel: its THUMBNAIL is the album cover, not a frame, so never use it as an image. `images/million-reasons-frame.jpg` is a 480x270 auto-frame from YouTube; swap in a full-res still from Nathan's edit when he has one. Wayback archive of the Whiskey Riff URL still to do (his click).
+
 **30 October 2026, later — Learn section started.** A free interactive video production course at `learn/` (nathaneadam.com/learn/), modelled on the old CyberCollege course (topic list only; its text and images are copyrighted). Three lessons built (three-point lighting, levels and clipping, aperture). Two standing rules: every mention gets a visual, and gear gets an Amazon search link. It has its own stylesheet (`learn/learn.css`) and its own copy of three.js. **Read `LEARN-PLAN.md` (its Status section first) before touching any of it.** The 3D head is CC BY 3.0 and its credit line must stay.
 
 **30 October 2026 — "Midnight" restyle, site-wide.** Black stage, Inter
